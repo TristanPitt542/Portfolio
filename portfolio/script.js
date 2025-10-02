@@ -1,3 +1,4 @@
+// script.js
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -32,30 +33,29 @@ usernameInput.addEventListener("keydown", (e) => {
 });
 
 function connectChat() {
-  const ws = new WebSocket("ws://192.168.0.103:8080");
+  const ws = new WebSocket("ws://192.168.0.32:3001");
 
   const chatLog = document.getElementById("chat-log");
   const chatInput = document.getElementById("chat-input");
   const chatSend = document.getElementById("chat-send");
 
-function appendMessage(text, isSystem = false) {
-  const div = document.createElement("div");
-  div.classList.add("message");
-  if (isSystem) {
-    div.classList.add("system");
-    div.textContent = text;
-  } else {
-    // Expect format "username: message"
-    const [name, ...msgParts] = text.split(":");
-    const usernameEl = document.createElement("b");
-    usernameEl.classList.add("username");
-    usernameEl.textContent = name;
-    div.appendChild(usernameEl);
-    div.appendChild(document.createTextNode(":" + msgParts.join(":")));
+  function appendMessage(text, isSystem = false) {
+    const div = document.createElement("div");
+    div.classList.add("message");
+    if (isSystem) {
+      div.classList.add("system");
+      div.textContent = text;
+    } else {
+      const [name, ...msgParts] = text.split(":");
+      const usernameEl = document.createElement("b");
+      usernameEl.classList.add("username");
+      usernameEl.textContent = name;
+      div.appendChild(usernameEl);
+      div.appendChild(document.createTextNode(":" + msgParts.join(":")));
+    }
+    chatLog.appendChild(div);
+    chatLog.scrollTop = chatLog.scrollHeight;
   }
-  chatLog.appendChild(div);
-  chatLog.scrollTop = chatLog.scrollHeight;
-}
 
   ws.onopen = () => {
     ws.send(JSON.stringify({ type: "login", username }));
@@ -75,7 +75,11 @@ function appendMessage(text, isSystem = false) {
     }
   };
 
-  ws.onclose = () => appendMessage("[Disconnected]", true);
+  ws.onclose = () => {
+    appendMessage("[Disconnected, retrying...]", true);
+    setTimeout(connectChat, 2000); // 🔄 retry after 2s
+  };
+
   ws.onerror = () => appendMessage("[Error]", true);
 
   chatSend.onclick = () => {

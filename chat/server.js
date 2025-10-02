@@ -1,7 +1,7 @@
 const WebSocket = require("ws");
 
-const wss = new WebSocket.Server({ port: 8080, host: "0.0.0.0" });
-console.log("✅ WebSocket server running on ws://192.168.0.103:8080");
+const wss = new WebSocket.Server({ port: 3001, host: "0.0.0.0" });
+console.log("✅ WebSocket server running on ws://192.168.0.32:8080");
 
 wss.on("connection", (ws) => {
   let username = null;
@@ -47,4 +47,35 @@ wss.on("connection", (ws) => {
   ws.on("close", () => {
     console.log(`${username || "A user"} disconnected`);
   });
+
+  let socket;
+let reconnectInterval = 2000; // 2 seconds between attempts
+
+  function connect() {
+    socket = new WebSocket("ws://192.168.0.32:3001");
+
+    socket.onopen = () => {
+      console.log("✅ Connected to server");
+      // Auto-login example (optional)
+      socket.send(JSON.stringify({ type: "login", username: "User123" }));
+    };
+
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      console.log("📩 Message:", data);
+    };
+
+    socket.onclose = () => {
+      console.warn("⚠️ Disconnected. Reconnecting...");
+      setTimeout(connect, reconnectInterval);
+    };
+
+    socket.onerror = (err) => {
+      console.error("❌ WebSocket error:", err);
+      socket.close(); // Force reconnect
+    };
+  }
+
+  // Start connection
+  connect();  
 });
