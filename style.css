@@ -10,7 +10,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url("./assets/Boxes.png"); /* replace with your image path */
+  background-image: url("./assets/Boxes.png"); 
   background-repeat: repeat;
   background-size: auto;
   background-attachment: fixed;
@@ -41,13 +41,13 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 12vh;
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 a {
@@ -58,12 +58,12 @@ a {
 a:hover {
   color: grey;
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.8rem;
   text-decoration-color: rgb(181, 181, 181);
 }
 
 .logo {
-  font-size: 1000rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -86,8 +86,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
-  width: 30px;
+  height: 20px;
+  width: 28px;
   cursor: pointer;
 }
 
@@ -95,7 +95,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -106,17 +106,17 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -142,17 +142,9 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 3rem;
+  padding-top: 3vh;
+  margin: 2rem 1.5rem;
   min-height: fit-content;
-}
-
-.section-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
 }
 
 /* PROFILE SECTION */
@@ -160,55 +152,37 @@ section {
 #profile {
   display: flex;
   align-items: center;
-  justify-content: center; /* centers the entire profile section horizontally */
-  gap: 3rem; /* space between picture and text */
-  flex-wrap: wrap; /* allows stacking on small screens */
-  margin: 4rem auto;
-  max-width: 1000px; /* optional: keeps layout neat on large screens */
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 1000px;
 }
-
 
 /* Profile Picture Container */
 .section__pic-container {
-  flex: 0 0 250px;
-  height: 250px;
+  flex: 0 0 220px;
+  height: 220px;
   display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
-  border: rgb(53, 53, 53) .2rem solid;
-  border-radius: 100%;      /* circular border */
-  overflow: hidden;        /* image stays inside circle */
+  justify-content: center;
+  align-items: center;
+  border: rgb(53, 53, 53) 0.2rem solid;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 .section__pic-container img {
   max-width: 110%;
   max-height: 110%;
-  object-fit: contain;  /* keeps original aspect ratio */
+  object-fit: contain;
 }
 
 /* About Text */
 .section__text {
-  flex: 1; /* take remaining horizontal space */
+  flex: 1;
   min-width: 280px;
-  max-width: 600px;
+  max-width: 550px;
   text-align: left;
-}
-
-/* Responsive: stack vertically on small screens */
-@media (max-width: 768px) {
-  #profile {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section__pic-container {
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .section__text {
-    text-align: center;
-  }
 }
 
 .section__text p {
@@ -220,27 +194,27 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
+  margin-top: 0.8rem;
+  gap: 0.8rem;
 }
 
 /* ICONS */
 
 .icon {
   cursor: pointer;
-  height: 3rem;
+  height: 2.5rem;
 }
 
 /* BUTTONS */
@@ -248,15 +222,15 @@ section {
 .btn-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
-  border-radius: 2rem;
+  padding: 0.8rem;
+  width: 7rem;
+  border-radius: 1.5rem;
 }
 
 .btn-color-1,
@@ -292,14 +266,11 @@ section {
 
 /* ABOUT SECTION */
 
-#about {
-  position: relative;
-}
-
 .about-containers {
   display: flex;
-  gap: 2rem;
-  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .about-details-container {
@@ -308,61 +279,41 @@ section {
   justify-content: center;
 }
 
-.about-pic {
-  border-radius: 2rem;
-  display: flex;
-  margin: 0 auto;
-  width: 400px;
-  height: 400px;
-}
-
 .arrow {
   position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  right: -3rem;
+  bottom: 2rem;
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 1rem;
   flex: 1;
   background: white;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   border: rgb(163, 163, 163) 0.2rem solid;
   text-align: center;
 }
 
 /* EXPERIENCE SECTION */
 
-#experience {
-  position: relative;
-}
-
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
 .experience-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 1.2rem;
 }
 
 .article-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
+  gap: 1rem;
   justify-content: space-around;
 }
 
 article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
+  width: 9rem;
+  justify-content: flex-start;
   gap: 0.5rem;
 }
 
@@ -372,29 +323,22 @@ article .icon {
 
 /* PROJECTS SECTION */
 
-#projects {
-  position: relative;
-}
-
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+.details-container.color-container {
+  padding: 1rem;
+  margin: 0;
+  background: #fafafa;
+  border: rgb(163, 163, 163) 0.2rem solid;
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   width: 90%;
   height: 90%;
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 0.8rem;
   color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
 }
 
 /* CONTACT SECTION */
@@ -403,16 +347,17 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: auto;
+  padding: 2rem 0;
 }
 
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   border: rgb(163, 163, 163) 0.2rem solid;
   background: rgb(255, 255, 255);
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   padding: 0.5rem;
 }
 
@@ -421,188 +366,32 @@ article .icon {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1rem;
+  margin: 0.8rem;
 }
 
 .contact-info-container p {
   font-size: larger;
 }
 
-.contact-icon {
-  cursor: default;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: auto;
   margin: 0 1rem;
+  padding: 1.5rem 0;
 }
 
 footer p {
   text-align: center;
 }
 
-/* Chat login overlay */
-#chat-login {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #1e1e1e;
-  color: #fff;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 1000;
-}
+/* TOP MENU */
 
-/* Hide chat by default until logged in */
-#chat {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* login appears at top */
-  align-items: stretch;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  background: #111;
-  color: white;
-  border-left: 2px solid #333;
-  z-index: 999;
-  overflow: hidden;
-}
-
-/* ========================= */
-/*        CHAT SIDEBAR       */
-/* ========================= */
-
-#chat {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 300px;
-  background-color: #18181b;
-  border-left: 1px solid #303030;
-  display: flex;
-  flex-direction: column;
-  z-index: 999;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Toggle button */
-#chat-toggle {
-  position: fixed;
-  top: 50%;
-  right: 300px; /* or wherever you want it */
-  background-color: #9147ff;
-  transform: translateY(-50%);
-  color: #fff;
-  border-radius: 5px 0 0 5px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1001;
-  transition: right 0.3s ease;
-  border: none;
-  padding: 12px 8px;
-}
-
-/* When chat is collapsed, move toggle closer to screen edge */
-#chat.collapsed + #chat-toggle {
-  right: 0;
-}
-
-/* Chat log */
-#chat-log {
-  flex: 1;
-  overflow-y: auto;
-  padding: 15px;
-  background-color: #0e0e10;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-#chat-log,
-#chat-input-container {
-  display: none;
-}
-
-/* Messages */
-.message {
-  font-size: 14px;
-  line-height: 1.4;
-  word-wrap: break-word;
-  text-align: left;
-  color: #ffffff;
-}
-
-.message b.username {
-  font-weight: bold;
-  margin-right: 5px;
-  color: #9147ff;
-}
-
-.message.system {
-  color: #adadb8;
-  font-size: 0.85rem;
-  text-align: center;
-  font-style: italic;
-  padding: 2px 0;
-}
-
-/* Chat input */
-#chat-input-container {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #18181b;
-  border-top: 1px solid #303030;
-  gap: 10px;
-}
-
-#chat-input {
-  flex: 1;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
-  background-color: #0e0e10;
-  color: #efeff1;
-  outline: none;
-}
-
-#chat-send {
-  padding: 10px 10px;
-  border-radius: 8px;
-  border: none;
-  background-color: #9147ff;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.2s ease-in-out;
-}
-
-#chat-send:hover {
-  background-color: #772ce8;
-}
-
-/* Top Menu */
 #top-menu {
   background-color: #111;
   color: white;
   display: flex;
-  justify-content: space-between; /* logo left, links right */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
@@ -611,7 +400,7 @@ footer p {
   right: 0;
   z-index: 1000;
   border-bottom: 2px solid #333;
-  height: 70px;
+  height: 60px;
 }
 
 #top-menu .logo {
@@ -622,7 +411,7 @@ footer p {
 
 #top-menu .top-menu-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   align-items: center;
 }
 
@@ -631,7 +420,7 @@ footer p {
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
@@ -640,16 +429,16 @@ footer p {
 }
 
 #top-menu .top-menu-links img.icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 6px;
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
   filter: invert(1);
 }
 
 /* Hide text next to icons on small height or width */
 @media (max-height: 600px), (max-width: 900px) {
   #top-menu .top-menu-links a span {
-    display: none; /* hide text */
+    display: none;
   }
 
   #top-menu {
@@ -664,46 +453,114 @@ main {
 }
 
 main.chat-visible {
-  margin-right: 320px; /* width of chat + small padding */
+  margin-right: 320px;
 }
 
+/* CHAT SIDEBAR */
 
-
-
-/* Chat login overlay */
-#chat-login {
-  display: flex;
-  flex-direction: column; /* stack input and button vertically */
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
-  height: 100%;            /* fill the chat sidebar */
-  width: 300px;             /* full width */
-  gap: 1rem;               /* space between input and button */
-  box-sizing: border-box;  /* padding works correctly */
-}
-
-/* Chat Sidebar */
 #chat {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;               /* sidebar width */
-  height: 100%;               /* full height of viewport */
+  width: 280px;
+  height: 100%;
   background: #111;
   color: white;
   border-left: 2px solid #333;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 8px;
   box-sizing: border-box;
   z-index: 999;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 #chat.collapsed {
   transform: translateX(100%);
 }
 
+/* Chat login overlay */
+#chat-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 0.8rem;
+  box-sizing: border-box;
+}
+
+#chat-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #0e0e10;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message {
+  font-size: 13px;
+  line-height: 1.3;
+  word-wrap: break-word;
+  text-align: left;
+  color: #ffffff;
+}
+
+.message b.username {
+  font-weight: bold;
+  margin-right: 4px;
+  color: #9147ff;
+}
+
+.message.system {
+  color: #adadb8;
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+  padding: 1px 0;
+}
+
+#chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #18181b;
+  border-top: 1px solid #303030;
+  gap: 8px;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  background-color: #0e0e10;
+  color: #efeff1;
+  outline: none;
+}
+
+#chat-send {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #9147ff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+#chat-send:hover {
+  background-color: #772ce8;
+}
+
+/* Toggle button */
 #chat-toggle:enabled {
   opacity: 1;
   cursor: pointer;
