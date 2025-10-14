@@ -27,13 +27,22 @@ loginBtn.addEventListener("click", () => {
   connectChat();
 });
 
+const chat = document.getElementById("chat");
+const toggleBtn = document.getElementById("chat-toggle");
+const main = document.querySelector("main");
+
+toggleBtn.addEventListener("click", () => {
+  chat.classList.toggle("collapsed");
+  main.classList.toggle("chat-visible");
+});
+
 // Optional: press Enter to login
 usernameInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") loginBtn.click();
 });
 
 function connectChat() {
-  const ws = new WebSocket("ws://192.168.0.32:3001");
+  const ws = new WebSocket("ws://192.168.0.32:5500");
 
   const chatLog = document.getElementById("chat-log");
   const chatInput = document.getElementById("chat-input");
