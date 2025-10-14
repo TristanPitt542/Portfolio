@@ -1,4 +1,6 @@
-// script.js
+// =====================
+// HAMBURGER MENU TOGGLE
+// =====================
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -6,42 +8,67 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+// =====================
+// MAIN CHAT + LOGIN LOGIC
+// =====================
+document.addEventListener("DOMContentLoaded", () => {
+console.log("✅ script.js loaded");
+
 const loginSection = document.getElementById("chat-login");
 const chatSection = document.getElementById("chat");
 const loginBtn = document.getElementById("login-btn");
 const usernameInput = document.getElementById("username-input");
+const chatToggleBtn = document.getElementById("chat-toggle");
+const main = document.querySelector("main");
 
 let username = "";
 
+if (!loginBtn) {
+  console.error("❌ Login button not found");
+  return;
+}
+
+// Login button handler
 loginBtn.addEventListener("click", () => {
   const name = usernameInput.value.trim();
   if (!name) return alert("Please enter a username");
 
   username = name;
 
-  // Hide login, show chat
-  loginSection.style.display = "none";
-  chatSection.style.display = "block";
+  // Hide login, show chat log & input
+  loginSection.style.display = "none";       // login box inside chat
+  document.getElementById("chat-log").style.display = "flex";
+  document.getElementById("chat-input-container").style.display = "flex";
 
-  // Connect WebSocket now
   connectChat();
 });
 
-const chat = document.getElementById("chat");
-const toggleBtn = document.getElementById("chat-toggle");
-const main = document.querySelector("main");
-
-toggleBtn.addEventListener("click", () => {
-  chat.classList.toggle("collapsed");
-  main.classList.toggle("chat-visible");
-});
-
-// Optional: press Enter to login
+// Allow pressing Enter to login
 usernameInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") loginBtn.click();
 });
 
+// Toggle chat visibility
+chatToggleBtn.addEventListener("click", () => {
+  console.log("💬 Chat toggle clicked");
+
+  const isCollapsed = chatSection.classList.toggle("collapsed");
+  main.classList.toggle("chat-visible", !isCollapsed);
+
+  // Smooth slide effect
+  if (isCollapsed) {
+    chatToggleBtn.style.right = "0";
+  } else {
+    chatToggleBtn.style.right = "300px"; // width of chat
+  }
+});
+
+// =====================
+// WebSocket Chat Setup
+// =====================
+
 function connectChat() {
+  console.log("🔌 Connecting to chat...");
   const ws = new WebSocket("ws://192.168.0.32:5500");
 
   const chatLog = document.getElementById("chat-log");
@@ -86,7 +113,7 @@ function connectChat() {
 
   ws.onclose = () => {
     appendMessage("[Disconnected, retrying...]", true);
-    setTimeout(connectChat, 2000); // 🔄 retry after 2s
+    setTimeout(connectChat, 2000);
   };
 
   ws.onerror = () => appendMessage("[Error]", true);
@@ -102,3 +129,4 @@ function connectChat() {
     if (e.key === "Enter") chatSend.click();
   });
 }
+});

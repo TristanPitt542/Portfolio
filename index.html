@@ -37,7 +37,7 @@
     </div>
 
     <!-- Main content -->
-    <main class="chat-visible">
+    <main>
       <body>
 
         <!-- Profile Section -->
@@ -46,54 +46,14 @@
             <img src="./assets/ProfileMe.png" alt="Tristan Pitt profile picture" />
           </div>
           <div class="section__text">
-
-            <p class="section__text__p2">Darlington, United Kingdom</p>
-            <p class="section__text__p2">Games Programmer</p>
-          </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
-          <div class="about-details-container">
-            <div class="section-container">
-              <div class="about-details-container">
-                <div class="details-container">
-                  <h1 class="title">About Me</h1>
-                  <p>
-                    Game programmer specializing in systems and gameplay programming, focused on writing efficient, clean code and tackling new challenges in game development.
-                  </p>
-                </div>
-                <div class="about-containers">
-                  <div class="details-container">
-                    <img
-                      src="./assets/experience.png"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <h3>Experience</h3>
-                    <p>3+ years <br />Games Programming and App Development</p>
-                  </div>
-                  <div class="details-container">
-                    <img
-                      src="./assets/education2.png"
-                      alt="Education icon"
-                      class="icon"
-                    />
-                    <h3>Education</h3>
-                    <p>
-                      B.Sc. Bachelors Degree<br />Games Programming<br />First Class
-                      Honours
-                    </p>
-                  </div>
-                </div>
+            <div class="about-details-container">
+              <div class="details-container">
+                <h1 class="title">About Me</h1>
+                <p>
+                  Game programmer specializing in systems and gameplay programming, focused on writing efficient, clean code and tackling new challenges in game development.
+                </p>
               </div>
             </div>
-            <img
-              src="./assets/arrow.png"
-              alt="Arrow icon"
-              class="icon arrow"
-              onclick="location.href='./#experience'"
-            />
           </div>
         </section>
 
@@ -233,23 +193,6 @@
             onclick="location.href='./#contact'"
           />
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-          <p class="section__text__p1">Get in Touch</p>
-          <h1 class="title">Contact Me</h1>
-          <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-              <p><a href="mailto:TristanPitt01@gmail.com">TristanPitt01@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-              <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-              <p><a href="https://www.linkedin.com/in/tristan-pitt">LinkedIn</a></p>
-            </div>
-          </div>
-        </section>
-
         <!-- Footer -->
         <footer>
           <nav>
@@ -265,38 +208,25 @@
           <p>Copyright &#169; 2023 Tristan Pitt. All Rights Reserved.</p>
         </footer>
     </main>
-
     <!-- Chat Sidebar -->
-    <div id="chat">
+    <div id="chat" class="collapsed">
+      <!-- Chat Login (visible before login) -->
+      <div id="chat-login">
+        <input type="text" id="username-input" placeholder="Enter username" />
+        <button id="login-btn">Login</button>
+      </div>
+
+      <!-- Chat log (hidden until login) -->
       <div id="chat-log"></div>
+
       <div id="chat-input-container">
         <input type="text" id="chat-input" placeholder="Type a message..." />
         <button id="chat-send">Send</button>
       </div>
     </div>
 
-    <!-- Chat Toggle Button -->
-    <button id="chat-toggle">Chat</button>
-
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      function toggleMenu() {
-        const menuLinks = document.querySelector(".menu-links");
-        const hamburgerIcon = document.querySelector(".hamburger-icon");
-        menuLinks.classList.toggle("open");
-        hamburgerIcon.classList.toggle("open");
-      }
-
-      // Chat toggle functionality
-      const chat = document.getElementById("chat");
-      const toggleBtn = document.getElementById("chat-toggle");
-      const main = document.querySelector("main");
-
-      toggleBtn.addEventListener("click", () => {
-        chat.classList.toggle("collapsed");
-        main.classList.toggle("chat-visible");
-      });
-    </script>
+    <!-- Chat toggle button-->
+    <!--<button id="chat-toggle" >💬 Chat</button>-->
+    <script src="script.js"></script>
   </body>
 </html>

@@ -144,7 +144,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 3rem;
   min-height: fit-content;
 }
 
@@ -159,21 +159,56 @@ section {
 
 #profile {
   display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  align-items: center;
+  justify-content: center; /* centers the entire profile section horizontally */
+  gap: 3rem; /* space between picture and text */
+  flex-wrap: wrap; /* allows stacking on small screens */
+  margin: 4rem auto;
+  max-width: 1000px; /* optional: keeps layout neat on large screens */
 }
 
+
+/* Profile Picture Container */
 .section__pic-container {
+  flex: 0 0 250px;
+  height: 250px;
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  border: rgb(53, 53, 53) .2rem solid;
+  border-radius: 100%;      /* circular border */
+  overflow: hidden;        /* image stays inside circle */
 }
 
+.section__pic-container img {
+  max-width: 110%;
+  max-height: 110%;
+  object-fit: contain;  /* keeps original aspect ratio */
+}
+
+/* About Text */
 .section__text {
-  align-self: center;
-  text-align: center;
+  flex: 1; /* take remaining horizontal space */
+  min-width: 280px;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .section__text {
+    text-align: center;
+  }
 }
 
 .section__text p {
@@ -190,7 +225,7 @@ section {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -412,37 +447,38 @@ footer p {
   text-align: center;
 }
 
-/* LOGIN SECTION */
-
+/* Chat login overlay */
 #chat-login {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+  gap: 8px;
+  z-index: 1000;
 }
 
-#username-input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 10px;
-  width: 200px;
-  font-size: 16px;
-}
-
-#login-btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: #9147ff;
+/* Hide chat by default until logged in */
+#chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* login appears at top */
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: #111;
   color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-#login-btn:hover {
-  background-color: #772ce8;
+  border-left: 2px solid #333;
+  z-index: 999;
+  overflow: hidden;
 }
 
 /* ========================= */
@@ -463,26 +499,21 @@ footer p {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Hidden chat */
-#chat.collapsed {
-  transform: translateX(100%); /* moves sidebar out of view */
-}
-
 /* Toggle button */
 #chat-toggle {
   position: fixed;
   top: 50%;
-  right: 300px; /* initial position near chat */
-  transform: translateY(-50%);
-  z-index: 1000;
+  right: 300px; /* or wherever you want it */
   background-color: #9147ff;
+  transform: translateY(-50%);
   color: #fff;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
   border-radius: 5px 0 0 5px;
   font-weight: bold;
-  transition: right 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 1001;
+  transition: right 0.3s ease;
+  border: none;
+  padding: 12px 8px;
 }
 
 /* When chat is collapsed, move toggle closer to screen edge */
@@ -499,6 +530,11 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+#chat-log,
+#chat-input-container {
+  display: none;
 }
 
 /* Messages */
@@ -629,4 +665,46 @@ main {
 
 main.chat-visible {
   margin-right: 320px; /* width of chat + small padding */
+}
+
+
+
+
+/* Chat login overlay */
+#chat-login {
+  display: flex;
+  flex-direction: column; /* stack input and button vertically */
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  height: 100%;            /* fill the chat sidebar */
+  width: 300px;             /* full width */
+  gap: 1rem;               /* space between input and button */
+  box-sizing: border-box;  /* padding works correctly */
+}
+
+/* Chat Sidebar */
+#chat {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;               /* sidebar width */
+  height: 100%;               /* full height of viewport */
+  background: #111;
+  color: white;
+  border-left: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 999;
+  overflow: hidden;
+}
+
+#chat.collapsed {
+  transform: translateX(100%);
+}
+
+#chat-toggle:enabled {
+  opacity: 1;
+  cursor: pointer;
 }
