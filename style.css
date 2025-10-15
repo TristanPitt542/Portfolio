@@ -155,20 +155,23 @@ section {
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  margin: 2rem auto;
-  max-width: 1000px;
+  margin: 3rem auto;
 }
 
 /* Profile Picture Container */
 .section__pic-container {
-  flex: 0 0 220px;
-  height: 220px;
+  flex: 0 0 200px;
+  height: 200px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: rgb(53, 53, 53) 0.2rem solid;
-  border-radius: 100%;
-  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden; 
+  max-width: 200px;
+  max-height: 200px;
+
 }
 
 .section__pic-container img {
@@ -181,8 +184,10 @@ section {
 .section__text {
   flex: 1;
   min-width: 280px;
-  max-width: 550px;
-  text-align: left;
+  max-width: 600px;
+  text-align: center;
+  justify-content: center;
+  margin: 2rem auto;
 }
 
 .section__text p {
