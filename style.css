@@ -183,6 +183,8 @@ section {
 .icon {
   cursor: pointer;
   height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
 }
 
 /* BUTTONS */
@@ -190,7 +192,7 @@ section {
 .btn-container {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
+  padding: 1rem;
 }
 
 .btn {
@@ -301,13 +303,20 @@ article .icon {
 }
 
 .project-img {
+  object-fit: contain;
+  object-position: top;
   width: 512px;
   height: 512px;
 }
 
 .project-title {
-  margin: 0.8rem;
   color: rgb(255, 255, 255);
+}
+
+.skill{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* CONTACT SECTION */
