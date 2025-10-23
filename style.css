@@ -206,31 +206,36 @@ section {
   border: rgb(53, 53, 53) 0.2rem solid;
 }
 
+/* Hover pointer for both */
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
+/* Base and hover styles swapped */
+.btn-color-1 {
+  background: none;
+  color: black;
+}
+
+.btn-color-1:hover {
   background: rgb(53, 53, 53);
   border: rgb(255, 255, 255) 0.2rem solid;
   color: white;
 }
 
-.btn-color-1:hover {
-  background: rgba(0, 0, 0, 0);
+.btn-color-2 {
+  background: rgb(53, 53, 53);
+  border: rgb(255, 255, 255) 0.2rem solid;
+  color: white;
+}
+
+.btn-color-2:hover {
+  background: none;
   border: rgb(0, 0, 0) 0.2rem solid;
   color: black;
 }
 
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgba(255, 255, 255) 0.2rem solid;
-}
 
 /* ABOUT SECTION */
 
