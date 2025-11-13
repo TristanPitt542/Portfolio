@@ -36,51 +36,58 @@
     <!-- Main content -->
     <main>
       <body>
+
         <!-- Profile Section -->
-        <section id="profile">
+        <section id="Profile">
           <div class="about-containers" style="justify-content: center;">
             <div class="section__pic-container" >
               <img src="./assets/Pictures/ProfileMe.png" alt="Tristan Pitt profile picture" />
             </div>
             <div class="section__text">
+              
               <h1 class="title">About Me</h1>
-                <div class="details-container">
-                  <p>
-                    Game programmer specializing in systems and gameplay programming, focused on writing efficient, clean code and tackling new challenges in game development.
-                  </p>
+
+              <div class="details-container">
+                <p>
+                  Game programmer specializing in systems and gameplay programming, focused on writing efficient, clean code and tackling new challenges in game development.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Education Experience-->
-        <div class="about-containers" style="margin: 0 auto; justify-content: center; flex-direction: row; max-width: 900px;">
-          <div class="details-container">
-            <img
-              src="./assets/Pictures/experience.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <h3 class = "title">Experience</h3>
-            <p>3+ years <br />Games Programming and App Development</p>
+        <!-- Education & Experience-->
+         <section id="Education-Experience">
+          <div class="about-containers" style="margin: 0 auto; justify-content: center; flex-direction: row; max-width: 900px;">
+            <div class="details-container">
+              <img
+                src="./assets/Pictures/experience.png"
+                alt="Experience icon"
+                class="icon"
+                style="max-width: 100px;"
+              />
+              <h3 class = "title">Experience</h3>
+              <p>3+ years <br /> Games Programming and App Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/Pictures/education.png"
+                alt="Education icon"
+                class="icon"
+                style="max-width: 100px;"
+              />
+              <h3 class = "title">Education</h3>
+              <p>
+                B.Sc. Bachelors Degree<br />Games Programming<br />First Class
+                Honours
+              </p>
+            </div>
           </div>
-          <div class="details-container">
-            <img
-              src="./assets/Pictures/education.png"
-              alt="Education icon"
-              class="icon"
-            />
-            <h3 class = "title">Education</h3>
-            <p>
-              B.Sc. Bachelors Degree<br />Games Programming<br />First Class
-              Honours
-            </p>
-          </div>
-        </div>
+        </section>
 
         <!-- Projects Section -->
         <section id="projects">
-          <h1 class="title">Browse My Recent Projects</h1>
+          <h1 class="title">My Rencent Projects</h1>
           <div class="experience-details-container">
             <div class="about-containers">
 
@@ -88,12 +95,14 @@
               <div class="details-container color-container">
                 <div class="article-container">
                   <video 
-                    src="./assets/Videos/GraphicsProgramming_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Prject 1">
+                    src="./assets/Videos/GraphicsProgramming_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Project 1">
                   </video>
                 </div>
-                <h2 class="experience-sub-title project-title">Graphics Programmming</h2>
+                <h2 class="experience-sub-title project-title">Graphics Programming</h2>
                 <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/TristanPitt542/3D-graphics-programming'"> Github </button>
+                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/3D-graphics-programming'">
+                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
+                  </button>
                 </div>
               </div>
 
@@ -106,7 +115,9 @@
                 </div>
                 <h2 class="experience-sub-title project-title">Journeyman</h2>
                 <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/TristanPitt542/SnakeGame'"> Github </button>
+                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Journeyman'">
+                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
+                  </button>
                 </div>
               </div>
 
@@ -119,7 +130,9 @@
                 </div>
                 <h2 class="experience-sub-title project-title">Physics Simulation</h2>
                 <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/TristanPitt542/Sphere-Collision.git'"> Github </button>
+                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Sphere-Collision'">
+                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
+                  </button>
                 </div>
               </div>
 
@@ -127,86 +140,141 @@
               <div class="details-container color-container">
                 <div class="article-container">
                   <video 
-                    src="/assets/Videos/GameOfLife_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Prject 4">
+                    src="./assets/Videos/GameOfLife_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Prject 4">
                   </video>
                 </div>
                 <h2 class="experience-sub-title project-title">Game Of Life</h2>
                 <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/TristanPitt542/Game-Of-Life.git'"> Github </button>
+                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Game-Of-Life'">
+                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
+                  </button>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
         
-        <!-- Technical Section -->
-        <section id="experience">
-          <h1 class="title">Technical Experience</h1>
-          <div class="experience-details-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:2rem; width:100%;">
-            <div class="about-containers">
-              <div class="details-container">
-                <div class="article-container">
-                  <article class="skill">
-                    <div>
-                      <h3>Unreal Engine</h3>
-                      <p>Experienced</p>
-                    </div>
-                  </article>
+        <!-- Programming Languages -->
+        <section id="languages">
+          <h1 class="title">Programming Languages</h1>
 
-                  <article class="skill">                    
-                    <div>
-                      <h3>C++</h3>
-                      <p>Experienced</p>
-                    </div>
-                  </article>
+          <div class="details-container">
+            <div class="experience-details-container">
+              <div class="about-containers"></div>
 
-                  <article class="skill">
-                    <div>
-                      <h3>C#</h3>
-                      <p>Intermediate</p>
-                    </div>
-                  </article>
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" 
+                    alt="C++ Logo" class="skill-logo">
+                <div><h3>C++</h3></div>
+              </article>
 
-                  <article class="skill">     
-                    <div>
-                      <h3>GameMaker Studio</h3>
-                      <p>Intermediate</p>
-                    </div>
-                  </article>
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/C_Sharp_Icon.png" 
+                    alt="C# Logo" class="skill-logo">
+                <div><h3>C#</h3></div>
+              </article>
 
-                  <article class="skill">
-                    <div>
-                      <h3>Git</h3>
-                      <p>Intermediate</p>
-                    </div>
-                  </article>
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" 
+                    alt="Python Logo" class="skill-logo">
+                <div><h3>Python</h3></div>
+              </article>
 
-                  <article class="skill">
-                    <div>
-                      <h3>Python</h3>
-                      <p>Basic</p>
-                    </div>
-                  </article>
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" 
+                    alt="JavaScript Logo" class="skill-logo">
+                <div><h3>JavaScript</h3></div>
+              </article>
 
-                  <article class="skill"> 
-                    <div>
-                      <h3>JavaScript</h3>
-                      <p>Basic</p>
-                    </div>
-                  </article>
-
-                  <article class="skill">
-                    <div>
-                      <h3>NodeJS</h3>
-                      <p>Basic</p>
-                    </div>
-                  </article>
-
-                </div>
-              </div>
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" 
+                    alt="NodeJS Logo" class="skill-logo">
+                <div><h3>NodeJS</h3></div>
+              </article>
             </div>
           </div>
+        </section>
 
+        <!-- Tools & Platforms -->
+        <section id="tools-platforms">
+          <h1 class="title">Tools & Platforms</h1>
+          <div class="details-container">
+            <div class="experience-details-container">
+              <div class="about-containers"></div>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/UE_Logo_Black_Centered.svg" 
+                    alt="Unreal Engine Logo" class="skill-logo">
+                <div><h3>Unreal Engine</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png" 
+                    alt="Unity Logo" class="skill-logo">
+                <div><h3>Unity</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_Icon_2022.svg" 
+                    alt="Visual Studio Logo" class="skill-logo">
+                <div><h3>Visual Studio</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" 
+                    alt="Visual Studio Code Logo" class="skill-logo">
+                <div><h3>Visual Studio Code</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="./assets/Pictures/Github_Icon.png" 
+                    alt="GitHub Logo" class="skill-logo">
+                <div><h3>GitHub</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" 
+                    alt="Git Logo" class="skill-logo">
+                <div><h3>Git</h3></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Framework & Libraries -->
+        <section id="frameworks">
+          <h1 class="title">Framework & Libraries</h1>
+          <div class="details-container">
+            <div class="experience-details-container">
+              <div class="about-containers"></div>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" 
+                    alt="OpenGL Logo" class="skill-logo">
+                <div><h3>OpenGL</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/SFML_Logo.svg" 
+                    alt="SFML logo" class="skill-logo">
+                <div><h3>SFML</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://private-user-images.githubusercontent.com/8225057/257811288-9bf98541-559d-4049-94db-7eb96ef83b6e.jpeg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMwMDQ1OTIsIm5iZiI6MTc2MzAwNDI5MiwicGF0aCI6Ii84MjI1MDU3LzI1NzgxMTI4OC05YmY5ODU0MS01NTlkLTQwNDktOTRkYi03ZWI5NmVmODNiNmUuanBlZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTEzVDAzMjQ1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTllZjhmNmY4N2UwZmYwYTZlM2Y5NTIwMDNhM2RhNGI5NWRkOTYyODdhYzUyZmY0NmY4YTkzZjU3ZmRkNTQ1MTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.nGdpLo3vloZ8oKsb82F53qScnOz_P5Yf1YHWLAG7dko" 
+                    alt="Dear ImGui Logo" class="skill-logo">
+                <div><h3>ImGui</h3></div>
+              </article>
+
+              <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg" 
+                    alt="CMake Logo" class="skill-logo">
+                <div><h3>CMake</h3></div>
+              </article>
+
+            </div>
+          </div>
         </section>
 
         <!-- Footer -->
@@ -214,26 +282,7 @@
           <p>Copyright &#169; 2023 Tristan Pitt. All Rights Reserved.</p>
         </footer>
     </main>
-    
-    <!-- Chat Sidebar -->
-    <div id="chat" class="collapsed">
-      <!-- Chat Login (visible before login) -->
-      <div id="chat-login">
-        <input type="text" id="username-input" placeholder="Enter username" />
-        <button id="login-btn">Login</button>
-      </div>
 
-      <!-- Chat log (hidden until login) -->
-      <div id="chat-log"></div>
-
-      <div id="chat-input-container">
-        <input type="text" id="chat-input" placeholder="Type a message..." />
-        <button id="chat-send">Send</button>
-      </div>
-    </div>
-
-    <!-- Chat toggle button-->
-    <!--<button id="chat-toggle" >💬 Chat</button>-->
     <script src="script.js"></script>
   </body>
 </html>
