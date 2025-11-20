@@ -152,6 +152,25 @@ section {
   height: 50px;
   object-fit: contain;
 }
+/* ========= LeetCode Stats Section ========= */
+#leetcode-stats {
+  padding: 3vh 1.5rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.leetcode-stats-container {
+  display: inline-block;
+  background: #333;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.leetcode-stats-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
 
 /* ================= BUTTONS ================= */
 .btn-container {
