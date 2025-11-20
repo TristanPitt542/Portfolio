@@ -33,3 +33,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading LeetCode stats:", err);
   }
 });
+
+const logos = document.querySelectorAll('.skill img');
+
+logos.forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    const color = getDominantColor(img); // function to get main color
+    img.style.filter = `drop-shadow(0 0 15px ${color})`;
+  });
+});

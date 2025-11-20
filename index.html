@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tristan Pitt Potfolio</title>
+    <title>Tristan Pitt Portfolio</title>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
@@ -13,7 +14,8 @@
     <!-- Top Menu Bar -->
     <div id="top-menu">
       <a class="logo">Tristan Pitt</a>
-      <a class = "title" style = "color: white; align-items: center;">Portfolio</a>
+      <a class="title" style="color: white;">Portfolio</a>
+
       <div class="top-menu-links">
         <a href="https://github.com/TristanPitt542" target="_blank">
           <img src="./assets/Pictures/Github_Icon.png" class="icon" alt="GitHub" />
@@ -33,280 +35,275 @@
         </a>
       </div>
     </div>
-    
-    <!-- Main content -->
+
     <main>
-      <body>
 
-        <!-- Profile Section -->
-        <section id="Profile">
-          <div class="about-containers" style="justify-content: center;">
-            <div class="section__pic-container" >
-              <img src="./assets/Pictures/ProfileMe.png" alt="Tristan Pitt profile picture" />
-            </div>
-            <div class="section__text">
-              
-              <h1 class="title">About Me</h1>
+      <!-- Profile + LeetCode Section -->
+      <section id="profile-leetcode" class="section-wrapper">
 
-              <div class="details-container">
-                <p>
-                  Game programmer specializing in systems and gameplay programming, focused on writing efficient, clean code and tackling new challenges in game development.
-                </p>
-              </div>
+        <!-- LEFT SIDE: PROFILE -->
+        <div class="profile-left">
+          <img src="./assets/Pictures/ProfileMe.png" alt="Tristan Pitt profile picture" class="profile-pic" />
+
+          <h1 class="title">About Me</h1>
+          <p class="about-text">
+            Game programmer specializing in systems and gameplay programming,
+            focused on writing efficient, clean code and tackling new challenges
+            in game development.
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE: LEETCODE -->
+        <div class="leetcode-right">
+          <h2 class="section-title">LeetCode Statistics</h2>
+
+          <div id="leetcode-card">
+            <div id="leetcode-header">
+              <img src="https://leetcode.com/static/images/LeetCode_logo.png" alt="LeetCode Logo" />
+              <h3 id="lc-username">Loading...</h3>
             </div>
+
+            <div id="leetcode-data">
+              <p><strong>Total Solved:</strong> <span id="lc-total"></span></p>
+              <p><strong>Easy:</strong> <span id="lc-easy"></span></p>
+              <p><strong>Medium:</strong> <span id="lc-medium"></span></p>
+              <p><strong>Hard:</strong> <span id="lc-hard"></span></p>
+              <p><strong>Acceptance Rate:</strong> <span id="lc-accept"></span></p>
+              <p><strong>Ranking:</strong> <span id="lc-rank"></span></p>
+            </div>
+
+            <button id="leetcode-button" onclick="window.open('https://leetcode.com/Dazagi542/', '_blank')">
+              View Full Profile
+            </button>
           </div>
-        </section>
+        </div>
 
-        <!-- LeetCode Section -->
-        <section id="leetcode">
-          <h1 class="title">LeetCode Stats</h1>
-          <div id="leetcode-stats">
-            <p>Loading stats...</p>
-          </div>
-        </section>
+      </section>
 
-        <!-- Education & Experience-->
-         <section id="Education-Experience">
-          <div class="about-containers" style="margin: 0 auto; justify-content: center; flex-direction: row; max-width: 900px;">
-            <div class="details-container">
-              <img
-                src="./assets/Pictures/experience.png"
-                alt="Experience icon"
-                class="icon"
-                style="max-width: 100px;"
-              />
-              <h3 class = "title">Experience</h3>
-              <p>3+ years <br /> Games Programming and App Development</p>
+      <!-- Experience / Education -->
+      <section id="education-experience" class="section-wrapper">
+        <div class="info-card">
+          <img src="./assets/Pictures/experience.png" class="info-icon" alt="Experience Icon" />
+          <h3 class="info-title">Experience</h3>
+          <p class="info-text">3+ years<br />Games Programming & App Development</p>
+        </div>
+
+        <div class="info-card">
+          <img src="./assets/Pictures/education.png" class="info-icon" alt="Education Icon" />
+          <h3 class="info-title">Education</h3>
+          <p class="info-text">
+            B.Sc. Games Programming<br />
+            First Class Honours
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h1 class="title">My Recent Projects</h1>
+
+        <div class="projects-container">
+
+          <!-- Project 1 -->
+          <div class="project-item">
+            <div class="project-media">
+              <video src="./assets/Videos/GraphicsProgramming_gif.mp4" autoplay loop muted playsinline></video>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/Pictures/education.png"
-                alt="Education icon"
-                class="icon"
-                style="max-width: 100px;"
-              />
-              <h3 class = "title">Education</h3>
-              <p>
-                B.Sc. Bachelors Degree<br />Games Programming<br />First Class
-                Honours
+            <div class="project-info">
+              <h2>Graphics Programming</h2>
+              <p class="project-description">
+                A custom 3D graphics engine using OpenGL. Implemented transformations, projection, shaders, lighting, and OBJ loading.
               </p>
+              <div class="project-tech">
+                <span>C++</span><span>OpenGL</span><span>GLSL</span><span>Math Libraries</span>
+              </div>
+              <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/3D-graphics-programming'">
+                <img src="./assets/Pictures/Github_Icon.png" class="github-icon" />
+              </button>
             </div>
           </div>
-        </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-          <h1 class="title">My Recent Projects</h1>
-          <div class="projects-container">
-
-            <!-- Project 1 -->
-            <div class="project-item">
-              <div class="project-media">
-                <video src="./assets/Videos/GraphicsProgramming_gif.mp4" autoplay loop muted playsinline></video>
-              </div>
-              <div class="project-info">
-                <h2>Graphics Programming</h2>
-                <p class="project-description">A custom-built 3D graphics engine using OpenGL. Implemented transformations, projection, shaders, lighting, and OBJ loading.</p>
-                <div class="project-tech">
-                  <span>C++</span><span>OpenGL</span><span>GLSL</span><span>Math Libraries</span>
-                </div>
-                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/3D-graphics-programming'">
-                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
-                </button>
-              </div>
+          <!-- Project 2 -->
+          <div class="project-item">
+            <div class="project-media">
+              <video src="./assets/Videos/journeyman_gif.mp4" autoplay loop muted playsinline></video>
             </div>
-
-            <!-- Project 2 -->
-            <div class="project-item">
-              <div class="project-media">
-                <video src="./assets/Videos/journeyman_gif.mp4" autoplay loop muted playsinline></video>
+            <div class="project-info">
+              <h2>Journeyman</h2>
+              <p class="project-description">
+                This project is a vertical slice of a Tunic-style action-adventure game, developed as part of the Journeyman group project.
+                The goal was to create a playable prototype that demonstrates core gameplay mechanics including exploration, combat, and environmental interaction.
+              </p>
+              <div class="project-tech">
+                <span>Unreal Engine</span><span>Blueprints</span>
               </div>
-              <div class="project-info">
-                <h2>Journeyman</h2>
-                <p class="project-description">A third-person Unreal Engine project exploring movement, environment interaction, and gameplay systems.</p>
-                <div class="project-tech">
-                  <span>Unreal Engine</span><span>Blueprints</span>
-                </div>
-                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Journeyman'">
-                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
-                </button>
-              </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-item">
-              <div class="project-media">
-                <video src="./assets/Videos/SphereCollision_gif.mp4" autoplay loop muted playsinline></video>
-              </div>
-              <div class="project-info">
-                <h2>Physics Simulation</h2>
-                <p class="project-description">A sphere collision physics simulation demonstrating impulse resolution, restitution, and collision detection algorithms.</p>
-                <div class="project-tech">
-                  <span>C++</span><span>Math</span><span>Physics Engine Logic</span>
-                </div>
-                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Sphere-Collision'">
-                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
-                </button>
-              </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-item">
-              <div class="project-media">
-                <video src="./assets/Videos/GameOfLife_gif.mp4" autoplay loop muted playsinline></video>
-              </div>
-              <div class="project-info">
-                <h2>Game of Life</h2>
-                <p class="project-description">A visual implementation of Conway's Game of Life simulating cellular automata with efficient grid updating.</p>
-                <div class="project-tech">
-                  <span>C++</span><span>SDL / Rendering</span><span>Simulation Logic</span>
-                </div>
-                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Game-Of-Life'">
-                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- Programming Languages -->
-        <section id="languages">
-          <h1 class="title">Programming Languages</h1>
-
-          <div class="details-container">
-            <div class="experience-details-container">
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" 
-                    alt="C++ Logo" class="skill-logo">
-                <div><h3>C++</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/C_Sharp_Icon.png" 
-                    alt="C# Logo" class="skill-logo">
-                <div><h3>C#</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" 
-                    alt="Python Logo" class="skill-logo">
-                <div><h3>Python</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" 
-                    alt="JavaScript Logo" class="skill-logo">
-                <div><h3>JavaScript</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" 
-                    alt="HTML Logo" class="skill-logo">
-                <div><h3>HTML</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" 
-                    alt="CSS Logo" class="skill-logo">
-                <div><h3>CSS</h3></div>
-              </article>
-
+              <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Journeyman'">
+                <img src="./assets/Pictures/Github_Icon.png" class="github-icon" />
+              </button>
             </div>
           </div>
-        </section>
 
-        <!-- Framework & Libraries -->
-        <section id="frameworks">
-          <h1 class="title">Framework & Libraries</h1>
-          <div class="details-container">
-            <div class="experience-details-container">
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/UE_Logo_Black_Centered.svg" 
-                    alt="Unreal Engine Logo" class="skill-logo">
-                <div><h3>Unreal Engine</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png" 
-                    alt="Unity Logo" class="skill-logo">
-                <div><h3>Unity</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GameMaker_2022.png" 
-                    alt="Unity Logo" class="skill-logo" style="width: 130px;">
-                <div><h3>Game Maker</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" 
-                    alt="OpenGL Logo" class="skill-logo" style="width: 130px;">
-                <div><h3>OpenGL</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/SFML_Logo.svg" 
-                    alt="SFML logo" class="skill-logo">
-                <div><h3>SFML</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://user-images.githubusercontent.com/18671600/113561727-69b1be00-9648-11eb-826b-df145f555ba3.png" 
-                    alt="Dear ImGui Logo" class="skill-logo">
-                <div><h3>ImGui</h3></div>
-              </article>
-              
+          <!-- Project 3 -->
+          <div class="project-item">
+            <div class="project-media">
+              <video src="./assets/Videos/SphereCollision_gif.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-info">
+              <h2>Physics Simulation</h2>
+              <p class="project-description">
+                A sphere collision physics simulation demonstrating impulse resolution and collision detection.
+              </p>
+              <div class="project-tech">
+                <span>C++</span><span>Math</span><span>Physics Engine Logic</span>
+              </div>
+              <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Sphere-Collision'">
+                <img src="./assets/Pictures/Github_Icon.png" class="github-icon" />
+              </button>
             </div>
           </div>
-        </section>
 
-        <!-- Tools & Platforms -->
-        <section id="tools-platforms">
-          <h1 class="title">Tools & Platforms</h1>
-          <div class="details-container">
-            <div class="experience-details-container">
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_Icon_2022.svg" 
-                    alt="Visual Studio Logo" class="skill-logo">
-                <div><h3>Visual Studio</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" 
-                    alt="Visual Studio Code Logo" class="skill-logo">
-                <div><h3>Visual Studio Code</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="./assets/Pictures/Github_Icon.png" 
-                    alt="GitHub Logo" class="skill-logo">
-                <div><h3>GitHub</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" 
-                    alt="Git Logo" class="skill-logo">
-                <div><h3>Git</h3></div>
-              </article>
-
-              <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg" 
-                    alt="CMake Logo" class="skill-logo">
-                <div><h3>CMake</h3></div>
-              </article>
-
+          <!-- Project 4 -->
+          <div class="project-item">
+            <div class="project-media">
+              <video src="./assets/Videos/GameOfLife_gif.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-info">
+              <h2>Game of Life</h2>
+              <p class="project-description">
+                A visual implementation of Conway's Game of Life simulating cellular automata with efficient grid updating.
+              </p>
+              <div class="project-tech">
+                <span>C++</span><span>SDL</span><span>Simulation Logic</span>
+              </div>
+              <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Game-Of-Life'">
+                <img src="./assets/Pictures/Github_Icon.png" class="github-icon" />
+              </button>
             </div>
           </div>
-        </section>
 
-        <!-- Footer -->
-        <footer>
-          <p>Copyright &#169; 2025 Tristan Pitt. All Rights Reserved.</p>
-        </footer>
+        </div>
+      </section>
+
+      <!-- Programming Languages -->
+      <section id="languages">
+        <h1 class="title">Programming Languages</h1>
+        <div class="details-container">
+          <div class="experience-details-container">
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" class="skill-logo" alt="C++ Logo" />
+              <div><h3>C++</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/C_Sharp_Icon.png" class="skill-logo" alt="C# Logo" />
+              <div><h3>C#</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" class="skill-logo" alt="Python Logo" />
+              <div><h3>Python</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="skill-logo" alt="JavaScript Logo" />
+              <div><h3>JavaScript</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="skill-logo" alt="HTML Logo" />
+              <div><h3>HTML</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="skill-logo" alt="CSS Logo" />
+              <div><h3>CSS</h3></div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Frameworks & Libraries -->
+      <section id="frameworks">
+        <h1 class="title">Framework & Libraries</h1>
+        <div class="details-container">
+          <div class="experience-details-container">
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/UE_Logo_Black_Centered.svg" class="skill-logo" alt="Unreal Engine Logo" />
+              <div><h3>Unreal Engine</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png" class="skill-logo" alt="Unity Logo" />
+              <div><h3>Unity</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GameMaker_2022.png" class="skill-logo" style="width: 130px;filter: brightness(0) invert(1);" alt="GameMaker Logo" />
+              <div><h3>Game Maker</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" class="skill-logo" style="width: 130px;" alt="OpenGL Logo" />
+              <div><h3>OpenGL</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/SFML_Logo.svg" class="skill-logo" alt="SFML Logo" />
+              <div><h3>SFML</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://user-images.githubusercontent.com/18671600/113561727-69b1be00-9648-11eb-826b-df145f555ba3.png" class="skill-logo" alt="Dear ImGui Logo" />
+              <div><h3>ImGui</h3></div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Platforms -->
+      <section id="tools-platforms">
+        <h1 class="title">Tools & Platforms</h1>
+        <div class="details-container">
+          <div class="experience-details-container">
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_Icon_2022.svg" class="skill-logo" alt="Visual Studio Logo" />
+              <div><h3>Visual Studio</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" class="skill-logo" alt="VS Code Logo" />
+              <div><h3>Visual Studio Code</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="./assets/Pictures/Github_Icon.png" class="skill-logo" alt="GitHub Logo" />
+              <div><h3>GitHub</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" class="skill-logo" alt="Git Logo" />
+              <div><h3>Git</h3></div>
+            </article>
+
+            <article class="skill">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg" class="skill-logo" alt="CMake Logo" />
+              <div><h3>CMake</h3></div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>Copyright © 2025 Tristan Pitt. All Rights Reserved.</p>
+      </footer>
+
     </main>
 
     <script src="script.js"></script>

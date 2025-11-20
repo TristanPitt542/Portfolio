@@ -1,4 +1,5 @@
-/* ================= GENERAL ================= */
+/* ========================= GENERAL ========================= */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -27,20 +28,27 @@ p {
   font-weight: 500;
 }
 
-.title, h1.title, h2.project-title, h3 {
+.title,
+h1.title,
+h2.project-title,
+h3 {
   color: #ffffff;
   text-align: center;
 }
-.title{
+
+.title {
   font-size: xx-large;
 }
+
 section {
   padding: 3vh 1.5rem;
   margin: 2rem auto;
   min-height: fit-content;
 }
 
-/* ================= NAVIGATION ================= */
+
+/* ========================= NAVIGATION ========================= */
+
 #top-menu {
   background-color: #111;
   color: white;
@@ -92,14 +100,15 @@ section {
   #top-menu .top-menu-links a span {
     display: none;
   }
-
   #top-menu {
     height: 50px;
     padding: 0.5rem 1.5rem;
   }
 }
 
-/* ================= PROFILE ================= */
+
+/* ========================= PROFILE ========================= */
+
 #Profile {
   display: flex;
   align-items: center;
@@ -116,7 +125,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.2rem solid rgb(53,53,53);
+  border: 0.2rem solid rgb(53, 53, 53);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -135,11 +144,15 @@ section {
   margin: 2rem auto;
 }
 
+
+/* ========================= BUTTONS ========================= */
+
 .github-btn {
   background: transparent;
   border: none;
-  padding: 0;
+  padding: 1rem;
   cursor: pointer;
+  align-self: center;
   transition: transform 0.2s ease;
 }
 
@@ -152,27 +165,7 @@ section {
   height: 50px;
   object-fit: contain;
 }
-/* ========= LeetCode Stats Section ========= */
-#leetcode-stats {
-  padding: 3vh 1.5rem;
-  margin: 2rem auto;
-  text-align: center;
-}
 
-.leetcode-stats-container {
-  display: inline-block;
-  background: #333;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.leetcode-stats-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-}
-
-/* ================= BUTTONS ================= */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -187,7 +180,66 @@ section {
   transition: all 0.3s ease;
 }
 
-/* ================= ABOUT / SKILLS / EXPERIENCE ================= */
+
+/* ========================= LEETCODE STATS ========================= */
+
+#leetcode-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#leetcode-card {
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 14px;
+  background: #1b1b1b;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+#leetcode-card:hover {
+  transform: translateY(-5px);
+}
+
+#leetcode-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#leetcode-header img {
+  width: 40px;
+  height: 40px;
+}
+
+#leetcode-data p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+#leetcode-button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: #ffa116;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+#leetcode-button:hover {
+  background: #ff9100;
+}
+
+
+/* ========================= ABOUT / SKILLS / EXPERIENCE ========================= */
+
 .about-containers {
   display: flex;
   flex-wrap: wrap;
@@ -198,14 +250,18 @@ section {
 .details-container {
   flex: 1;
   padding: 1rem;
-  background-color: #5a5a5a;
-  border-radius: 1.5rem;
   text-align: center;
   width: fit-content;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
+  transition: 0.2s ease;
 }
 
 .experience-details-container {
@@ -215,7 +271,6 @@ section {
   gap: 2rem;
 }
 
-/* Skill Cards */
 .skill {
   display: flex;
   flex-direction: column;
@@ -229,6 +284,10 @@ section {
   transform: scale(1.25);
 }
 
+.skill:hover img {
+  filter: drop-shadow(0 0 10px rgba(255, 161, 22, 0.8));
+}
+
 .skill-logo {
   width: 80px;
   height: 80px;
@@ -236,38 +295,152 @@ section {
   margin-bottom: 0.5rem;
 }
 
-/* ================= PROJECTS ================= */
-.details-container.color-container {
-  background: #5a5a5a;
-  max-width: 512px;
-  margin: 0;
+
+/* ========================= PROJECTS ========================= */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.project-img {
+/* Project Item Container */
+.project-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
+  transition: 0.2s ease;
+  flex-wrap: wrap;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 0px 10px rgba(255, 161, 22, 0.25);
+}
+
+.project-media {
+  flex: 1 1 50px;
+  display: flex;
+  justify-content:left;
+  align-items: left;
+}
+
+/* Video */
+.project-media video {
   width: 100%;
-  max-width: 512px;
-  max-height: 512px;
-  object-fit: contain;
-  object-position: top;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
-.project-title {
+/* Info Section */
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Title with underline */
+.project-info h2 {
+  font-size: 2rem;
   color: #fff;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-/* Inserted PROJECTS section */
-.projects-container { display: flex; flex-direction: column; gap: 3rem; }
-.project-item { display: flex; gap: 2rem; background: #333; padding: 2rem; border-radius: 1.5rem; align-items: flex-start; }
-.project-media video { width: 420px; border-radius: 1rem; }
-.project-info { flex: 1; display: flex; flex-direction: column; gap: 1rem; }
-.project-info h2 { font-size: 1.8rem; color: #fff; }
-.project-description { color: #ccc; line-height: 1.5; }
-.project-tech { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.project-tech span { background: #555; padding: 0.3rem 0.6rem; border-radius: 0.5rem; font-size: 0.9rem; }
-.project-item .github-btn { margin-top: 1rem; }
-@media (max-width: 900px) { .project-item { flex-direction: column; text-align: center; } .project-media video { width: 100%; } }
+.project-info h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 3px;
+  background: #ffa116;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
 
-/* ================= CONTACT / FOOTER ================= */
+/* Description */
+.project-description {
+  color: #ccc;
+  line-height: 2;
+  font-size: large;
+  width: 80%;
+}
+
+/* Tech tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tech span {
+  background: #555;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* GitHub Button */
+.project-item .github-btn {
+  align-self:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 1rem;
+}
+
+/* Responsive: video left, info right, wrap if needed */
+@media (max-width: 1100px) {
+  .project-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    position: relative; /* ensure absolute works */
+    padding-bottom: 3rem; /* room for button */
+  }
+
+  .project-media video {
+    border-radius: 12px;
+  }
+
+  .project-info {
+    width: 100%;
+    align-items: center;
+  }
+
+  .project-info h2 {
+    text-align: center;
+  }
+
+  .project-info h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: none;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .project-item .github-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ========================= CONTACT / FOOTER ========================= */
+
 #contact {
   display: flex;
   justify-content: center;
@@ -279,7 +452,7 @@ section {
   display: flex;
   justify-content: center;
   border-radius: 1.5rem;
-  border: 0.2rem solid rgb(163,163,163);
+  border: 0.2rem solid rgb(163, 163, 163);
   background: #fff;
   margin: 1.5rem auto;
   padding: 0.5rem;
@@ -302,7 +475,9 @@ footer {
   text-align: center;
 }
 
-/* ================= MEDIA / RESPONSIVENESS ================= */
+
+/* ========================= MEDIA RESPONSIVENESS ========================= */
+
 @media (max-width: 768px) {
   .experience-details-container {
     gap: 1rem;
@@ -320,4 +495,133 @@ footer {
     width: 48px;
     height: 48px;
   }
+}
+
+
+/* ========================= WRAPPER ========================= */
+
+.section-wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+
+/* ========================= PROFILE LEFT ========================= */
+
+.profile-left {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 180px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 17px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+
+/* ========================= LEETCODE RIGHT ========================= */
+
+.leetcode-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+#leetcode-card {
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 15px;
+  color: white;
+  transition: 0.2s ease;
+}
+
+#leetcode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 0px 10px rgba(255, 161, 22, 0.25);
+}
+
+#leetcode-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+#leetcode-header img {
+  width: 40px;
+}
+
+#leetcode-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #ffa116;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#leetcode-button:hover {
+  background: #ff9900;
+}
+
+
+/* ========================= EXPERIENCE & EDUCATION ========================= */
+
+#education-experience {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  width: 260px;
+  padding: 20px;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
+  transition: 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.info-icon {
+  width: 70px;
+  margin-bottom: 12px;
+}
+
+.info-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  opacity: 0.8;
+  font-size: 16px;
 }
