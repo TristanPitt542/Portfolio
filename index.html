@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Tristan Pitt Potfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
@@ -12,7 +12,7 @@
     <!-- Top Menu Bar -->
     <div id="top-menu">
       <a class="logo">Tristan Pitt</a>
-      <a class = "title" style = "color: white;">Portfolio</a>
+      <a class = "title" style = "color: white; align-items: center;">Portfolio</a>
       <div class="top-menu-links">
         <a href="https://github.com/TristanPitt542" target="_blank">
           <img src="./assets/Pictures/Github_Icon.png" class="icon" alt="GitHub" />
@@ -87,81 +87,86 @@
 
         <!-- Projects Section -->
         <section id="projects">
-          <h1 class="title">My Rencent Projects</h1>
-          <div class="experience-details-container">
-            <div class="about-containers">
+          <h1 class="title">My Recent Projects</h1>
+          <div class="projects-container">
 
-              <!--Project 1-->
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <video 
-                    src="./assets/Videos/GraphicsProgramming_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Project 1">
-                  </video>
-                </div>
-                <h2 class="experience-sub-title project-title">Graphics Programming</h2>
-                <div class="btn-container">
-                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/3D-graphics-programming'">
-                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
-                  </button>
-                </div>
+            <!-- Project 1 -->
+            <div class="project-item">
+              <div class="project-media">
+                <video src="./assets/Videos/GraphicsProgramming_gif.mp4" autoplay loop muted playsinline></video>
               </div>
-
-              <!--Project 2-->
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <video 
-                    src="./assets/Videos/journeyman_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Prject 2">
-                  </video>
+              <div class="project-info">
+                <h2>Graphics Programming</h2>
+                <p class="project-description">A custom-built 3D graphics engine using OpenGL. Implemented transformations, projection, shaders, lighting, and OBJ loading.</p>
+                <div class="project-tech">
+                  <span>C++</span><span>OpenGL</span><span>GLSL</span><span>Math Libraries</span>
                 </div>
-                <h2 class="experience-sub-title project-title">Journeyman</h2>
-                <div class="btn-container">
-                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Journeyman'">
-                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
-                  </button>
-                </div>
+                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/3D-graphics-programming'">
+                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
+                </button>
               </div>
-
-              <!--Project 3-->
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <video 
-                    src="./assets/Videos/SphereCollision_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Prject 3">
-                  </video>
-                </div>
-                <h2 class="experience-sub-title project-title">Physics Simulation</h2>
-                <div class="btn-container">
-                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Sphere-Collision'">
-                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
-                  </button>
-                </div>
-              </div>
-
-              <!--Project 4-->
-              <div class="details-container color-container">
-                <div class="article-container">
-                  <video 
-                    src="./assets/Videos/GameOfLife_gif.mp4" autoplay loop muted playsinline class="project-img" alt="Prject 4">
-                  </video>
-                </div>
-                <h2 class="experience-sub-title project-title">Game Of Life</h2>
-                <div class="btn-container">
-                  <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Game-Of-Life'">
-                    <img src="./assets/Pictures/Github_Icon.png" alt="GitHub" class="github-icon">
-                  </button>
-                </div>
-              </div>
-
             </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+              <div class="project-media">
+                <video src="./assets/Videos/journeyman_gif.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="project-info">
+                <h2>Journeyman</h2>
+                <p class="project-description">A third-person Unreal Engine project exploring movement, environment interaction, and gameplay systems.</p>
+                <div class="project-tech">
+                  <span>Unreal Engine</span><span>Blueprints</span>
+                </div>
+                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Journeyman'">
+                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
+                </button>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+              <div class="project-media">
+                <video src="./assets/Videos/SphereCollision_gif.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="project-info">
+                <h2>Physics Simulation</h2>
+                <p class="project-description">A sphere collision physics simulation demonstrating impulse resolution, restitution, and collision detection algorithms.</p>
+                <div class="project-tech">
+                  <span>C++</span><span>Math</span><span>Physics Engine Logic</span>
+                </div>
+                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Sphere-Collision'">
+                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
+                </button>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-item">
+              <div class="project-media">
+                <video src="./assets/Videos/GameOfLife_gif.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="project-info">
+                <h2>Game of Life</h2>
+                <p class="project-description">A visual implementation of Conway's Game of Life simulating cellular automata with efficient grid updating.</p>
+                <div class="project-tech">
+                  <span>C++</span><span>SDL / Rendering</span><span>Simulation Logic</span>
+                </div>
+                <button class="github-btn" onclick="location.href='https://github.com/TristanPitt542/Game-Of-Life'">
+                  <img src="./assets/Pictures/Github_Icon.png" class="github-icon">
+                </button>
+              </div>
+            </div>
+
           </div>
         </section>
-        
+
         <!-- Programming Languages -->
         <section id="languages">
           <h1 class="title">Programming Languages</h1>
 
           <div class="details-container">
             <div class="experience-details-container">
-              <div class="about-containers"></div>
 
               <article class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" 
@@ -188,12 +193,6 @@
               </article>
 
               <article class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" 
-                    alt="NodeJS Logo" class="skill-logo">
-                <div><h3>NodeJS</h3></div>
-              </article>
-
-              <article class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" 
                     alt="HTML Logo" class="skill-logo">
                 <div><h3>HTML</h3></div>
@@ -214,7 +213,6 @@
           <h1 class="title">Framework & Libraries</h1>
           <div class="details-container">
             <div class="experience-details-container">
-              <div class="about-containers"></div>
 
               <article class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/UE_Logo_Black_Centered.svg" 
@@ -229,8 +227,14 @@
               </article>
 
               <article class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_GameMaker_2022.png" 
+                    alt="Unity Logo" class="skill-logo" style="width: 130px;">
+                <div><h3>Game Maker</h3></div>
+              </article>
+
+              <article class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" 
-                    alt="OpenGL Logo" class="skill-logo">
+                    alt="OpenGL Logo" class="skill-logo" style="width: 130px;">
                 <div><h3>OpenGL</h3></div>
               </article>
 
@@ -255,7 +259,6 @@
           <h1 class="title">Tools & Platforms</h1>
           <div class="details-container">
             <div class="experience-details-container">
-              <div class="about-containers"></div>
 
               <article class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_Icon_2022.svg" 
