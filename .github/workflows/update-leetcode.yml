@@ -1,0 +1,34 @@
+name: Update LeetCode Stats
+
+# Trigger workflow every 6 hours, and allow manual triggers
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - uses: actions/checkout@v3
+
+      # Step 2: Setup Node.js 22
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      # Step 3: Install dependencies
+      - run: npm install node-fetch@2
+
+      # Step 4: Run your fetch script
+      - run: node scripts/fetchLeetCode.js
+
+      # Step 5: Commit and push changes
+      - run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "actions@github.com"
+          git add stats/leetcode.json
+          git commit -m "Update LeetCode stats" || echo "No changes"
+          git push

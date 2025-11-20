@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "update-leetcode": "node fetchLeetCode.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TristanPitt542/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TristanPitt542/Portfolio/issues"
+  },
+  "homepage": "https://github.com/TristanPitt542/Portfolio#readme",
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
