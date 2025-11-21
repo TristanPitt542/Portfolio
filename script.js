@@ -10,26 +10,36 @@ function toggleMenu() {
 
 //get leetcode stats
 document.addEventListener("DOMContentLoaded", async () => {
-  const statsContainer = document.getElementById("leetcode-stats");
+  // Elements
+  const usernameEl = document.getElementById("lc-username");
+  const totalEl = document.getElementById("lc-total");
+  const easyEl = document.getElementById("lc-easy");
+  const mediumEl = document.getElementById("lc-medium");
+  const hardEl = document.getElementById("lc-hard");
+  const rankEl = document.getElementById("lc-rank");
+  const statsContainer = document.getElementById("leetcode-data");
+  const buttonEl = document.getElementById("leetcode-button");
 
   try {
-    // Fetch the local JSON file with your stats
+    // Fetch local JSON file
     const res = await fetch("stats/leetcode.json");
+    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     const data = await res.json();
 
-    // Display stats
-    statsContainer.innerHTML = `
-      <h3>${data.username}'s LeetCode Stats</h3>
-      <p><strong>Total Solved:</strong> ${data.totalSolved}</p>
-      <p><strong>Easy:</strong> ${data.totalEasy}</p>
-      <p><strong>Medium:</strong> ${data.totalMedium}</p>
-      <p><strong>Hard:</strong> ${data.totalHard}</p>
-      <p><strong>Ranking:</strong> ${data.ranking.toLocaleString()}</p>
-      <p><em>Last updated: ${new Date(data.fetchedAt).toLocaleString()}</em></p>
-    `;
+    // Populate stats
+    usernameEl.textContent = data.username;
+    totalEl.textContent = data.totalSolved;
+    easyEl.textContent = data.totalEasy;
+    mediumEl.textContent = data.totalMedium;
+    hardEl.textContent = data.totalHard;
+    rankEl.textContent = data.ranking.toLocaleString();
+
+    // Show stats and button
+    statsContainer.classList.remove("hidden");
+    buttonEl.classList.remove("hidden");
+
   } catch (err) {
-    // If JSON file missing or error occurs
-    statsContainer.innerHTML = "<p>Error loading stats.</p>";
+    usernameEl.textContent = "Error loading stats";
     console.error("Error loading LeetCode stats:", err);
   }
 });

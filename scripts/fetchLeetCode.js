@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
 
-const USERNAME = "Dazagi542"; // <-- change to your LeetCode username
+const USERNAME = "Dazagi542";
 
 async function fetchLeetCodeStats() {
   const query = `
