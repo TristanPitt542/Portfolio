@@ -34,10 +34,12 @@ h2.project-title,
 h3 {
   color: #ffffff;
   text-align: center;
+
 }
 
 .title {
   font-size: xx-large;
+  padding: 10px;
 }
 
 section {
@@ -190,6 +192,7 @@ section {
 
 #leetcode-card {
   width: 350px;
+  height: 350px;
   margin: auto;
   padding: 20px;
   border-radius: 14px;
@@ -222,7 +225,7 @@ section {
 }
 
 #leetcode-button {
-  margin-top: 16px;
+  margin-top: auto;
   padding: 10px 18px;
   background: #ffa116;
   border: none;
@@ -300,8 +303,10 @@ section {
 
 .projects-container {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  flex-direction:column;
+  justify-self: center;
+  gap: 2rem;
+  max-width: 90%;
 }
 
 /* Project Item Container */
@@ -512,38 +517,49 @@ footer {
 }
 
 
-/* ========================= PROFILE LEFT ========================= */
+/* ======================= PROFILE =========================== */
 
 .profile-left {
   flex: 1;
-  min-width: 300px;
-  text-align: center;
+  min-width: 700px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .profile-pic {
-  width: 180px;
-  border-radius: 100%;
-  margin-bottom: 20px;
+  width: 200px;
 }
 
 .about-text {
   font-size: 17px;
   opacity: 0.8;
   line-height: 1.6;
+  text-align: left;
 }
 
+.profile-container {
+  display: flex;
+  align-items: flex-start; /* align items at the top */
+  gap: 30px; /* space between sections */
+}
 
-/* ========================= LEETCODE RIGHT ========================= */
+/* ========================= LEETCODE ========================= */
 
 .leetcode-right {
   flex: 1;
   min-width: 320px;
 }
 
+.hidden {
+  display: none;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 18px;
 }
+
 
 #leetcode-card {
   padding: 20px;
@@ -597,7 +613,6 @@ footer {
 }
 
 .info-card {
-  width: 260px;
   padding: 20px;
   background: #1e1e1e;
   color: white;

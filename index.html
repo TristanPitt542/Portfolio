@@ -40,70 +40,49 @@
 
       <!-- Profile + LeetCode Section -->
       <section id="profile-leetcode" class="section-wrapper">
-
-        <!-- LEFT SIDE: PROFILE -->
-        <div class="profile-left">
+        <div class="profile-container">
+          <!-- LEFT SIDE: PROFILE PICTURE -->
           <img src="./assets/Pictures/ProfileMe.png" alt="Tristan Pitt profile picture" class="profile-pic" />
 
-          <h1 class="title">About Me</h1>
+          <!-- MIDDLE: ABOUT TEXT -->
           <p class="about-text">
-            Game programmer specializing in systems and gameplay programming,
-            focused on writing efficient, clean code and tackling new challenges
-            in game development.
+            Hi! I'm Tristan, a UK-based programmer specializing in C++.
+            I enjoy tackling technical challenges and experimenting with creative projects, whether it’s building games, tools, or small innovative systems.
+            I love exploring new ideas, pushing the limits of what I can create, and continuously improving my programming skills.
+            I’m always eager to learn and experiment, finding joy in solving problems and bringing ideas to life through code.
           </p>
-        </div>
 
-        <!-- RIGHT SIDE: LEETCODE -->
-        <div class="leetcode-right">
-          <h2 class="section-title">LeetCode Statistics</h2>
+          <!-- RIGHT SIDE: LEETCODE -->
+          <div class="leetcode-right">
+            <div id="leetcode-card">
+              <h2 class="section-title">LeetCode Statistics</h2>
+              <div id="leetcode-header">
+                <img src="https://leetcode.com/static/images/LeetCode_logo.png" alt="LeetCode Logo" />
+                <h3 id="lc-username">Loading...</h3>
+              </div>
 
-          <div id="leetcode-card">
-            <div id="leetcode-header">
-              <img src="https://leetcode.com/static/images/LeetCode_logo.png" alt="LeetCode Logo" />
-              <h3 id="lc-username">Loading...</h3>
+              <div id="leetcode-data" class="hidden">
+                <p><strong>Total Solved:</strong> <span id="lc-total"></span></p>
+                <p><strong>Easy:</strong> <span id="lc-easy"></span></p>
+                <p><strong>Medium:</strong> <span id="lc-medium"></span></p>
+                <p><strong>Hard:</strong> <span id="lc-hard"></span></p>
+                <p><strong>Acceptance Rate:</strong> <span id="lc-accept"></span></p>
+                <p><strong>Ranking:</strong> <span id="lc-rank"></span></p>
+              </div>
+
+              <button id="leetcode-button" class="hidden" onclick="window.open('https://leetcode.com/Dazagi542/', '_blank')">
+                View Full Profile
+              </button>
             </div>
-
-            <div id="leetcode-data">
-              <p><strong>Total Solved:</strong> <span id="lc-total"></span></p>
-              <p><strong>Easy:</strong> <span id="lc-easy"></span></p>
-              <p><strong>Medium:</strong> <span id="lc-medium"></span></p>
-              <p><strong>Hard:</strong> <span id="lc-hard"></span></p>
-              <p><strong>Acceptance Rate:</strong> <span id="lc-accept"></span></p>
-              <p><strong>Ranking:</strong> <span id="lc-rank"></span></p>
-            </div>
-
-            <button id="leetcode-button" onclick="window.open('https://leetcode.com/Dazagi542/', '_blank')">
-              View Full Profile
-            </button>
           </div>
-        </div>
-
-      </section>
-
-      <!-- Experience / Education -->
-      <section id="education-experience" class="section-wrapper">
-        <div class="info-card">
-          <img src="./assets/Pictures/experience.png" class="info-icon" alt="Experience Icon" />
-          <h3 class="info-title">Experience</h3>
-          <p class="info-text">3+ years<br />Games Programming & App Development</p>
-        </div>
-
-        <div class="info-card">
-          <img src="./assets/Pictures/education.png" class="info-icon" alt="Education Icon" />
-          <h3 class="info-title">Education</h3>
-          <p class="info-text">
-            B.Sc. Games Programming<br />
-            First Class Honours
-          </p>
         </div>
       </section>
 
       <!-- Projects -->
       <section id="projects">
-        <h1 class="title">My Recent Projects</h1>
+        <h1 class="title">My Projects</h1>
 
         <div class="projects-container">
-
           <!-- Project 1 -->
           <div class="project-item">
             <div class="project-media">
@@ -261,6 +240,24 @@
             </article>
 
           </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education-experience" class="section-wrapper">
+        <div class="info-card">
+          <img src="./assets/Pictures/experience.png" class="info-icon" alt="Experience Icon" />
+          <h3 class="info-title">Experience</h3>
+          <p class="info-text">3+ years<br />Games Programming & App Development</p>
+        </div>
+
+        <div class="info-card">
+          <img src="./assets/Pictures/education.png" class="info-icon" alt="Education Icon" />
+          <h3 class="info-title">Education</h3>
+          <p class="info-text">
+            B.Sc. Games Programming<br />
+            First Class Honours
+          </p>
         </div>
       </section>
 
