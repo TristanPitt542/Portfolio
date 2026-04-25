@@ -1,9 +1,9 @@
 name: Update LeetCode Stats
 
-# Trigger workflow every 6 hours, and allow manual triggers
+# Trigger workflow daily at midnight, and allow manual triggers
 on:
   schedule:
-    - cron: "0 */6 * * *"  # every 6 hours
+    - cron: "0 0 * * *"  # every day at 00:00 UTC
   workflow_dispatch:
 
 jobs:
