@@ -77,6 +77,7 @@ section {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+  color:#ff9900;
 }
 
 #top-menu .top-menu-links a {
@@ -85,11 +86,12 @@ section {
   font-size: 0.9rem;
 }
 
-#top-menu .top-menu-links a img.icon {
+#top-menu .top-menu-links img.icon {
   width: 28px;
   height: 28px;
   margin-right: 4px;
   filter: invert(1);
+  filter: invert(74%) sepia(95%) saturate(3640%) hue-rotate(360deg) brightness(101%) contrast(106%);
 }
 
 #top-menu .top-menu-links a:hover .icon {
@@ -347,6 +349,7 @@ section {
   width: 100%;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 1rem;
 }
 
@@ -546,14 +549,24 @@ footer {
 }
 
 .profile-pic {
-  width: 200px;
+  width: 350px;
+  height: 350px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* Prevents the image from stretching */
+  
+  /* The Border: width, style, and color */
+  border: 5px solid #ff9900; 
+  
+  /* The Circle: 50% creates a curve relative to the element size */
+  border-radius: 20%;
 }
 
 .about-text {
+  margin-top: 2rem;
   font-size: 17px;
   opacity: 0.8;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
 }
 
 .profile-container {
@@ -659,14 +672,17 @@ footer {
 .info-icon {
   width: 70px;
   margin-bottom: 12px;
+  color: #ff9900;
 }
 
 .info-title {
   font-size: 20px;
   margin-bottom: 8px;
+  color: #ff9900;
 }
 
 .info-text {
   opacity: 0.8;
   font-size: 16px;
+  color: #ff9900;
 }
